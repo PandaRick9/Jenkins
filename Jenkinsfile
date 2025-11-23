@@ -42,6 +42,11 @@ pipeline {
 
         stage('Deploy Local') {
              steps {
+                 sh '''
+                     export LANG=C.UTF-8
+                     export LC_ALL=C.UTF-8
+                     java -Dfile.encoding=UTF-8 -jar target/*.jar
+                    '''
                 sh 'pkill -f "food-delivery" || true'
                 sh 'sleep 3'
                 sh 'nohup java -jar target/food-delivery-1.0-SNAPSHOT.jar > app.log 2>&1 &'
