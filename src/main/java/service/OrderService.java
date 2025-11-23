@@ -22,21 +22,18 @@ public class OrderService {
     }
 
     public Optional<Order> createOrder(String customerName, Restaurant restaurant, List<String> dishNames) {
-        Log.logger.info("Создание заказа для: " + customerName);
-        Log.logger.fine("Ищем блюда в ресторане " + restaurant.getName());
+        Log.logger.info("Creating order for: " + customerName);
+        Log.logger.fine("Searching for dishes in restaurant " + restaurant.getName());
         Order order = new Order(customerName);
 
         for (String dishName : dishNames) {
             try {
                 Dish dish = restaurant.safeFindDish(dishName);
-
                 if (!dish.isAvailable()) {
                     notifier.notifyUnavailable(dishName, customerName);
                     return Optional.empty();
                 }
-
                 order.addDish(dish);
-
             } catch (DishNotFoundException | DuplicateDishException e) {
                 Log.logger.warning(e.getMessage());
                 notifier.notifyUnavailable(dishName, customerName);
@@ -46,10 +43,9 @@ public class OrderService {
 
         if (paymentService.processPayment(customerName, order.getTotal())) {
             order.markPaid();
-            deliveryService.deliver(order, "Алексей");
+            deliveryService.deliver(order, "Alex");
             return Optional.of(order);
         }
-
         return Optional.empty();
     }
 }

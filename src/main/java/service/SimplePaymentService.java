@@ -5,8 +5,8 @@ import config.Log;
 public class SimplePaymentService implements PaymentService {
     @Override
     public boolean processPayment(String customerName, double amount) {
-        Log.logger.info("Оплата оформляется: " + amount);
-        System.out.printf("Обработка оплаты %.2f₽ от клиента %s... Успешно%n", amount, customerName);
+        Log.logger.info("Processing payment: " + amount);
+        System.out.printf("Processing payment %.2f$ from customer %s... Success%n", amount, customerName);
         return true;
     }
 }

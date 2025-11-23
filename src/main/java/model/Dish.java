@@ -1,6 +1,5 @@
 package model;
 
-
 public class Dish {
     private final int id;
     private final String name;
@@ -31,7 +30,7 @@ public class Dish {
 
     @Override
     public String toString() {
-        return String.format("%s (%.2f₽) %s", name, price, available ? "[Available]" : "[Unavailable]");
+        return String.format("%s (%.2f$) %s", name, price, available ? "[Available]" : "[Unavailable]");
     }
 }
 

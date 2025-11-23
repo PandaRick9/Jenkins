@@ -13,10 +13,10 @@ class RestaurantTest {
     @Test
     void testSafeFindDish_Success() {
         Restaurant restaurant = new Restaurant("Test");
-        Dish expectedDish = new Dish(1, "Пицца", 500.0);
+        Dish expectedDish = new Dish(1, "Pizza", 500.0);
         restaurant.addDish(expectedDish);
 
-        Dish result = restaurant.safeFindDish("Пицца");
+        Dish result = restaurant.safeFindDish("Pizza");
 
         assertEquals(expectedDish, result);
     }
@@ -26,18 +26,18 @@ class RestaurantTest {
         Restaurant restaurant = new Restaurant("Test");
 
         assertThrows(DishNotFoundException.class, () -> {
-            restaurant.safeFindDish("Несуществующее блюдо");
+            restaurant.safeFindDish("Non-existent dish");
         });
     }
 
     @Test
     void testSafeFindDish_Duplicate() {
         Restaurant restaurant = new Restaurant("Test");
-        restaurant.addDish(new Dish(1, "Пицца", 500.0));
-        restaurant.addDish(new Dish(2, "Пицца", 600.0));
+        restaurant.addDish(new Dish(1, "Pizza", 500.0));
+        restaurant.addDish(new Dish(2, "Pizza", 600.0));
 
         assertThrows(DuplicateDishException.class, () -> {
-            restaurant.safeFindDish("Пицца");
+            restaurant.safeFindDish("Pizza");
         });
     }
 }

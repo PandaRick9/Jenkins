@@ -5,8 +5,8 @@ import model.Order;
 
 public class DeliveryService {
     public void deliver(Order order, String courierName) {
-        Log.logger.info("Доставка начата курьером " + courierName);
-        System.out.printf("Курьер %s доставил заказ #%d%n", courierName, order.hashCode());
+        Log.logger.info("Delivery started by courier " + courierName);
+        System.out.printf("Courier %s delivered order #%d%n", courierName, order.hashCode());
         order.markDelivered();
     }
 }

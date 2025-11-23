@@ -1,5 +1,6 @@
 package model;
 
+import config.Log;
 import exception.DishNotFoundException;
 import exception.DuplicateDishException;
 
@@ -22,18 +23,15 @@ public class Restaurant {
     public Optional<Dish> findDish(String name) {
         return menu.stream().filter(d -> d.getName().equalsIgnoreCase(name)).findFirst();
     }
-    public Dish safeFindDish(String name) throws DishNotFoundException, DuplicateDishException {
 
+    public Dish safeFindDish(String name) throws DishNotFoundException, DuplicateDishException {
         List<Dish> found = menu.stream()
                 .filter(d -> d.getName().equalsIgnoreCase(name))
                 .toList();
-
         if (found.isEmpty())
             throw new DishNotFoundException(name);
-
         if (found.size() > 1)
             throw new DuplicateDishException(name);
-
         return found.get(0);
     }
 
@@ -47,6 +45,6 @@ public class Restaurant {
 
     @Override
     public String toString() {
-        return "Ресторан: " + name;
+        return "Restaurant: " + name;
     }
 }

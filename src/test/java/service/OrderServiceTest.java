@@ -40,51 +40,51 @@ class OrderServiceTest {
         orderService = new OrderService(notificationService, paymentService, deliveryService);
 
         restaurant = new Restaurant("Test Restaurant");
-        restaurant.addDish(new Dish(1, "Пицца Маргарита", 550.0));
-        restaurant.addDish(new Dish(2, "Паста Карбонара", 480.0));
+        restaurant.addDish(new Dish(1, "Pizza Margherita", 550.0));
+        restaurant.addDish(new Dish(2, "Pasta Carbonara", 480.0));
     }
 
     @Test
     void testCreateOrder_Success() {
-        when(paymentService.processPayment("Анна", 1030.0)).thenReturn(true);
+        when(paymentService.processPayment("Anna", 1030.0)).thenReturn(true);
 
-        var result = orderService.createOrder("Анна", restaurant,
-                List.of("Пицца Маргарита", "Паста Карбонара"));
+        var result = orderService.createOrder("Anna", restaurant,
+                List.of("Pizza Margherita", "Pasta Carbonara"));
 
         assertTrue(result.isPresent());
-        verify(paymentService).processPayment("Анна", 1030.0);
-        verify(deliveryService).deliver(any(Order.class), eq("Алексей"));
+        verify(paymentService).processPayment("Anna", 1030.0);
+        verify(deliveryService).deliver(any(Order.class), eq("Alex"));
     }
 
     @Test
     void testCreateOrder_WithUnavailableDish() {
-        restaurant.findDish("Пицца Маргарита").ifPresent(Dish::markUnavailable);
+        restaurant.findDish("Pizza Margherita").ifPresent(Dish::markUnavailable);
 
-        var result = orderService.createOrder("Анна", restaurant,
-                List.of("Пицца Маргарита"));
+        var result = orderService.createOrder("Anna", restaurant,
+                List.of("Pizza Margherita"));
 
         assertFalse(result.isPresent());
-        verify(notificationService).notifyUnavailable("Пицца Маргарита", "Анна");
+        verify(notificationService).notifyUnavailable("Pizza Margherita", "Anna");
     }
 
     @Test
     void testCreateOrder_DishNotFound() {
-        var result = orderService.createOrder("Анна", restaurant,
-                List.of("Несуществующее блюдо"));
+        var result = orderService.createOrder("Anna", restaurant,
+                List.of("Non-existent dish"));
 
         assertFalse(result.isPresent());
-        verify(notificationService).notifyUnavailable("Несуществующее блюдо", "Анна");
+        verify(notificationService).notifyUnavailable("Non-existent dish", "Anna");
     }
 
     @Test
     void testCreateOrder_PaymentFailed() {
-        when(paymentService.processPayment("Анна", 550.0)).thenReturn(false);
+        when(paymentService.processPayment("Anna", 550.0)).thenReturn(false);
 
-        var result = orderService.createOrder("Анна", restaurant,
-                List.of("Пицца Маргарита"));
+        var result = orderService.createOrder("Anna", restaurant,
+                List.of("Pizza Margherita"));
 
         assertFalse(result.isPresent());
-        verify(paymentService).processPayment("Анна", 550.0);
+        verify(paymentService).processPayment("Anna", 550.0);
         verify(deliveryService, never()).deliver(any(), any());
     }
 }

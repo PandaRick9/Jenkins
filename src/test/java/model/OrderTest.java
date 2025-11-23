@@ -11,9 +11,9 @@ class OrderTest {
 
     @Test
     void testOrderCreation() {
-        Order order = new Order("Анна");
+        Order order = new Order("Anna");
 
-        assertEquals("Анна", order.getCustomerName());
+        assertEquals("Anna", order.getCustomerName());
         assertFalse(order.isPaid());
         assertFalse(order.isDelivered());
         assertEquals(0.0, order.getTotal());
@@ -22,9 +22,9 @@ class OrderTest {
 
     @Test
     void testAddDishAndTotal() {
-        Order order = new Order("Анна");
-        Dish dish1 = new Dish(1, "Пицца", 500.0);
-        Dish dish2 = new Dish(2, "Напиток", 100.0);
+        Order order = new Order("Anna");
+        Dish dish1 = new Dish(1, "Pizza", 500.0);
+        Dish dish2 = new Dish(2, "Drink", 100.0);
 
         order.addDish(dish1);
         order.addDish(dish2);
@@ -35,7 +35,7 @@ class OrderTest {
 
     @Test
     void testOrderStatusChanges() {
-        Order order = new Order("Анна");
+        Order order = new Order("Anna");
 
         order.markPaid();
         order.markDelivered();

@@ -43,10 +43,10 @@ public class Order {
 
     @Override
     public String toString() {
-        return String.format("Заказ #%d для %s: %d блюд, сумма %.2f₽ (%s, %s)",
+        return String.format("Order #%d for %s: %d dishes, total %.2f$ (%s, %s)",
                 id, customerName, items.size(), getTotal(),
-                paid ? "оплачен" : "не оплачен",
-                delivered ? "доставлен" : "не доставлен");
+                paid ? "paid" : "not paid",
+                delivered ? "delivered" : "not delivered");
     }
 
     public static int getCounter() {
