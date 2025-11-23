@@ -41,10 +41,7 @@ pipeline {
         }
 
         stage('Deploy Local') {
-            when {
-                branch 'main'
-            }
-            steps {
+             steps {
                 sh 'pkill -f "food-delivery" || true'
                 sh 'sleep 3'
                 sh 'nohup java -jar target/food-delivery-1.0-SNAPSHOT.jar > app.log 2>&1 &'
