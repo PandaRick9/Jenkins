@@ -1,0 +1,166 @@
+нояб. 16, 2025 8:53:35 PM Main main
+INFO: === Запуск системы доставки еды ===
+нояб. 16, 2025 8:53:35 PM model.Admin addDishToRestaurant
+FINE: Администратор добавил блюдо: Пицца Маргарита
+нояб. 16, 2025 8:53:35 PM model.Admin addDishToRestaurant
+FINE: Администратор добавил блюдо: Паста Карбонара
+нояб. 16, 2025 8:53:35 PM model.Customer makeOrder
+INFO: Клиент Анна делает заказ
+нояб. 16, 2025 8:53:35 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 16, 2025 8:53:35 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане ПиццаХаус
+нояб. 16, 2025 8:53:35 PM service.SimplePaymentService processPayment
+INFO: Оплата оформляется: 1030.0
+нояб. 16, 2025 8:53:35 PM service.DeliveryService deliver
+INFO: Доставка начата курьером Алексей
+нояб. 16, 2025 8:53:35 PM model.Customer lambda$makeOrder$0
+INFO: Заказ успешно создан
+нояб. 16, 2025 8:53:35 PM model.Customer makeOrder
+INFO: Клиент Анна делает заказ
+нояб. 16, 2025 8:53:35 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 16, 2025 8:53:35 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане ПиццаХаус
+нояб. 16, 2025 8:53:35 PM service.ConsoleNotificationService notifyUnavailable
+WARNING: Блюдо недоступно: Пицца Маргарита
+нояб. 16, 2025 8:53:35 PM model.Customer lambda$makeOrder$1
+SEVERE: Заказ создать не удалось
+нояб. 16, 2025 9:01:12 PM Main main
+INFO: === Запуск системы доставки еды ===
+нояб. 16, 2025 9:01:12 PM model.Admin addDishToRestaurant
+FINE: Администратор добавил блюдо: Пицца Маргарита
+нояб. 16, 2025 9:01:12 PM model.Admin addDishToRestaurant
+FINE: Администратор добавил блюдо: Паста Карбонара
+нояб. 16, 2025 9:01:12 PM model.Customer makeOrder
+INFO: Клиент Анна делает заказ
+нояб. 16, 2025 9:01:12 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 16, 2025 9:01:12 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане ПиццаХаус
+нояб. 16, 2025 9:01:12 PM service.SimplePaymentService processPayment
+INFO: Оплата оформляется: 1030.0
+нояб. 16, 2025 9:01:12 PM service.DeliveryService deliver
+INFO: Доставка начата курьером Алексей
+нояб. 16, 2025 9:01:12 PM model.Customer lambda$makeOrder$0
+INFO: Заказ успешно создан
+нояб. 16, 2025 9:01:12 PM model.Customer makeOrder
+INFO: Клиент Анна делает заказ
+нояб. 16, 2025 9:01:12 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 16, 2025 9:01:12 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане ПиццаХаус
+нояб. 16, 2025 9:01:12 PM service.ConsoleNotificationService notifyUnavailable
+WARNING: Блюдо недоступно: Пицца Маргарита
+нояб. 16, 2025 9:01:12 PM model.Customer lambda$makeOrder$1
+SEVERE: Заказ создать не удалось
+нояб. 23, 2025 3:44:13 PM Main main
+INFO: === Запуск системы доставки еды ===
+нояб. 23, 2025 3:44:14 PM model.Admin addDishToRestaurant
+FINE: Администратор добавил блюдо: Пицца Маргарита
+нояб. 23, 2025 3:44:14 PM model.Admin addDishToRestaurant
+FINE: Администратор добавил блюдо: Паста Карбонара
+нояб. 23, 2025 3:44:14 PM model.Customer makeOrder
+INFO: Клиент Анна делает заказ
+нояб. 23, 2025 3:44:14 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 23, 2025 3:44:14 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане ПиццаХаус
+нояб. 23, 2025 3:44:14 PM service.SimplePaymentService processPayment
+INFO: Оплата оформляется: 1030.0
+нояб. 23, 2025 3:44:14 PM service.DeliveryService deliver
+INFO: Доставка начата курьером Алексей
+нояб. 23, 2025 3:44:14 PM model.Customer lambda$makeOrder$0
+INFO: Заказ успешно создан
+нояб. 23, 2025 3:44:14 PM model.Customer makeOrder
+INFO: Клиент Анна делает заказ
+нояб. 23, 2025 3:44:14 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 23, 2025 3:44:14 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане ПиццаХаус
+нояб. 23, 2025 3:44:14 PM service.ConsoleNotificationService notifyUnavailable
+WARNING: Блюдо недоступно: Пицца Маргарита
+нояб. 23, 2025 3:44:14 PM model.Customer lambda$makeOrder$1
+SEVERE: Заказ создать не удалось
+нояб. 23, 2025 3:59:25 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 23, 2025 3:59:25 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане Test Restaurant
+нояб. 23, 2025 3:59:25 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 23, 2025 3:59:25 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане Test Restaurant
+нояб. 23, 2025 3:59:25 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 23, 2025 3:59:25 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане Test Restaurant
+нояб. 23, 2025 3:59:25 PM service.OrderService createOrder
+WARNING: Блюдо 'Несуществующее блюдо' не найдено
+нояб. 23, 2025 3:59:25 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 23, 2025 3:59:25 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане Test Restaurant
+нояб. 23, 2025 4:00:59 PM Main main
+INFO: === Запуск системы доставки еды ===
+нояб. 23, 2025 4:00:59 PM model.Admin addDishToRestaurant
+FINE: Администратор добавил блюдо: Пицца Маргарита
+нояб. 23, 2025 4:00:59 PM model.Admin addDishToRestaurant
+FINE: Администратор добавил блюдо: Паста Карбонара
+нояб. 23, 2025 4:00:59 PM model.Customer makeOrder
+INFO: Клиент Анна делает заказ
+нояб. 23, 2025 4:00:59 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 23, 2025 4:00:59 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане ПиццаХаус
+нояб. 23, 2025 4:00:59 PM service.SimplePaymentService processPayment
+INFO: Оплата оформляется: 1030.0
+нояб. 23, 2025 4:00:59 PM service.DeliveryService deliver
+INFO: Доставка начата курьером Алексей
+нояб. 23, 2025 4:00:59 PM model.Customer lambda$makeOrder$0
+INFO: Заказ успешно создан
+нояб. 23, 2025 4:00:59 PM model.Customer makeOrder
+INFO: Клиент Анна делает заказ
+нояб. 23, 2025 4:00:59 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 23, 2025 4:00:59 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане ПиццаХаус
+нояб. 23, 2025 4:00:59 PM service.ConsoleNotificationService notifyUnavailable
+WARNING: Блюдо недоступно: Пицца Маргарита
+нояб. 23, 2025 4:00:59 PM model.Customer lambda$makeOrder$1
+SEVERE: Заказ создать не удалось
+нояб. 23, 2025 4:01:10 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 23, 2025 4:01:10 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане Test Restaurant
+нояб. 23, 2025 4:01:10 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 23, 2025 4:01:10 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане Test Restaurant
+нояб. 23, 2025 4:01:10 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 23, 2025 4:01:10 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане Test Restaurant
+нояб. 23, 2025 4:01:10 PM service.OrderService createOrder
+WARNING: Блюдо 'Несуществующее блюдо' не найдено
+нояб. 23, 2025 4:01:10 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 23, 2025 4:01:10 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане Test Restaurant
+нояб. 23, 2025 4:01:24 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 23, 2025 4:01:24 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане Test Restaurant
+нояб. 23, 2025 4:01:25 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 23, 2025 4:01:25 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане Test Restaurant
+нояб. 23, 2025 4:01:25 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 23, 2025 4:01:25 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане Test Restaurant
+нояб. 23, 2025 4:01:25 PM service.OrderService createOrder
+WARNING: Блюдо 'Несуществующее блюдо' не найдено
+нояб. 23, 2025 4:01:25 PM service.OrderService createOrder
+INFO: Создание заказа для: Анна
+нояб. 23, 2025 4:01:25 PM service.OrderService createOrder
+FINE: Ищем блюда в ресторане Test Restaurant
