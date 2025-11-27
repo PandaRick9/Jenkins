@@ -31,8 +31,6 @@ public class Main {
 
         rest.findDish("Pizza Margherita").ifPresent(Dish::markUnavailable);
         customer.makeOrder(rest, List.of("Pizza Margherita"));
-
-        rest.findDish("Pizza Peperoni").ifPresent(Dish::markUnavailable);
-        customer.makeOrder(rest, List.of("Pizza Peperoni"));
+        System.out.println("Branch works");
     }
 }
