@@ -32,5 +32,6 @@ public class Main {
         rest.findDish("Pizza Margherita").ifPresent(Dish::markUnavailable);
         customer.makeOrder(rest, List.of("Pizza Margherita"));
         System.out.println("Branch works");
+        System.out.println("new logic develop");
     }
 }
