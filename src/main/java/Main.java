@@ -34,5 +34,6 @@ public class Main {
         System.out.println("Branch works");
         System.out.println("new logic develop");
         System.out.println("new feature");
+        System.out.println("Laba");
     }
 }
